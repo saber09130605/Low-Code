@@ -16,6 +16,7 @@ declare module 'vue' {
     ElIcon: typeof import('element-plus/es')['ElIcon']
     ElInput: typeof import('element-plus/es')['ElInput']
     ElTooltip: typeof import('element-plus/es')['ElTooltip']
+    LayerPanel: typeof import('./src/components/layerPanel/layerPanel.vue')['default']
     TextAndInput: typeof import('./src/components/common/textAndInput.vue')['default']
   }
 }
