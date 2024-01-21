@@ -1,5 +1,14 @@
 {
   "compilerOptions": {
+    "types": [
+      "node"
+    ],
+    "baseUrl": "./",
+    "paths": {
+      "@/*":[
+        "src/*", // 如果有红色波浪线提示 则配置为 "./src/*"
+      ]
+    },
     "target": "ES2020",
     "useDefineForClassFields": true,
     "module": "ESNext",
