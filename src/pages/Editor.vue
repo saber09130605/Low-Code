@@ -1,16 +1,19 @@
 <template>
-  <div>
+  <div class="editor-box">
     <baseHeaderVue
       :title="'过文章'"
       :compList="compList"
       :ctrlList="ctrlList"
     />
-    <div style="position: relative"></div>
+    <div class="content-box" style="position: relative">
+      <layerPanel />
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import baseHeaderVue from "../components/header/baseHeader.vue";
+import layerPanel from "../components/layerPanel/layerPanel.vue";
 
 defineProps<{
   compList?: [any]; //组件列表
@@ -21,9 +24,11 @@ defineProps<{
 <style src="./../assets/css/reset.css"></style>
 <style src="./../assets/css/base.css"></style>
 <style scoped>
-.tu {
-  position: absolute;
-  width: 1000px;
-  height: auto;
+.editor-box {
+  display: flex;
+  flex-direction: column;
+}
+.content-box {
+  flex: 1;
 }
 </style>
