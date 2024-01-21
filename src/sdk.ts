@@ -2,6 +2,7 @@ import { createApp, defineAsyncComponent, App as Application, Component } from '
 import compList from './assets/config/compList.json'
 import ctrlList from './assets/config/ctrlList.json'
 import { insertIntoArray } from './assets/utils/commonUtils';
+import { createPinia } from 'pinia'
 
 export enum RenderTpye {
     EDITOR,//编辑器
@@ -24,6 +25,7 @@ export class LtVisualization {
     }
    public render(divId:string | Element,type:RenderTpye,callback:Function|undefined) {
         let pComp:Component | undefined
+        
         switch (type) {
             case RenderTpye.EDITOR:
                 pComp = defineAsyncComponent({
@@ -37,9 +39,11 @@ export class LtVisualization {
                 break;
             
         }
-        if (pComp) {
+       if (pComp) {
             this.app = createApp(pComp,{compList:this.compList,ctrlList:this.ctrlList})
             let app = this.app
+            const pinia = createPinia()
+            app.use(pinia)
             app.mount('#' + divId)
 
             if (typeof callback === 'function') {
