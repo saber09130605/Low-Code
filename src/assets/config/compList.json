@@ -1,0 +1,24 @@
+[
+    {
+        "icon":"Histogram",
+        "title":"图表",
+        "child":[
+            {
+                "icon":"Share",
+                "title":"折线图",
+                "compName":"Share",
+                "tips":"这是折线图"
+            },
+            {
+                "icon":"Histogram",
+                "title":"柱状图",
+                "compName":"Histogram"
+            }
+        ]
+    },
+    {
+        "icon":"Tickets",
+        "title":"文本",
+        "compName":"Text"
+    }
+]

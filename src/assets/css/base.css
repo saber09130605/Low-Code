@@ -1,0 +1,7 @@
+body,html {
+    color: #efefef;
+}
+
+:root {
+--lvtu-hover-background: #42b883;
+}

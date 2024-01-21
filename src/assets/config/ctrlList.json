@@ -1,0 +1,12 @@
+[ 
+    {
+    "name":"预览",
+    "icon":"View",
+    "action":"Preview"
+    },
+    {
+        "name":"保存",
+        "icon":"FolderAdd",
+        "action":"save"
+    }
+]
