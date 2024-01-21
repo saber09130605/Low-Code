@@ -15,14 +15,18 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from "vue";
 import textAndInputComp from "../common/textAndInput.vue";
 import compListComp from "./compList.vue";
 import ctrlListComp from "./ctrlList.vue";
+import useColorStores from "@/stores/useColorStores";
 defineProps<{
   title?: string;
   compList?: any[];
   ctrlList?: any[];
 }>();
+const colorStores = useColorStores();
+const baseColor = computed(() => colorStores.baseColor);
 
 const onTitleEdit = (newValue?: string) => {
   console.log({ newValue });
@@ -31,7 +35,7 @@ const onTitleEdit = (newValue?: string) => {
 
 <style scoped lang="scss">
 .base-header-box {
-  background: #000;
+  background: v-bind(baseColor);
   height: 60px;
   display: flex;
   align-items: center;
