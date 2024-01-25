@@ -27,8 +27,10 @@ defineProps<{
 .editor-box {
   display: flex;
   flex-direction: column;
+  height: 100vh;
 }
 .content-box {
   flex: 1;
+  position: relative;
 }
 </style>
